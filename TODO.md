@@ -1,0 +1,7 @@
+- Set up Travis CI for MRI versions, JRuby, Rubinius
+- Look into RDoc doc generation
+- Investigate "unlocked" FFI functionality
+- Consider bundling pre-compiled binaries
+- 100% code coverage
+- Document LZOP format, maybe?
+- Profile for hotspots
