@@ -1,5 +1,7 @@
 # LZO Ruby gem
 
+[![Build Status](https://travis-ci.org/aidansteele/lzo.svg?branch=master)](https://travis-ci.org/aidansteele/lzo)
+
 Wikipedia:
 
 > Lempel–Ziv–Oberhumer (LZO) is a lossless data compression algorithm that is focused on decompression speed.
