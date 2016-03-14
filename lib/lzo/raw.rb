@@ -20,7 +20,7 @@ module LZO
         ret_code = FFI.lzo1x_1_compress buf, buf_len, out_buf, out_len_buf, work_mem_buf
         raise "Unexpected error code: #{ret_code}" if ret_code != :LZO_E_OK # apparently never fails?
 
-        out_len = out_len_buf.read_uint64
+        out_len = out_len_buf.read_ulong_long
         out_buf.read_bytes out_len
       end
 
@@ -44,7 +44,7 @@ module LZO
         end while ret_code == :LZO_E_OUTPUT_OVERRUN
 
         if ret_code == :LZO_E_OK
-          out_len = out_len_buf.read_uint64
+          out_len = out_len_buf.read_ulong_long
           out_buf.read_bytes out_len
         else
           raise "Error: #{ret_code}" # TODO: do something?
