@@ -4,7 +4,7 @@ describe LZO::LzopCompressor do
   describe 'writing a file' do
     let(:output_io) { StringIO.new ''.force_encoding 'BINARY' }
     subject do
-      mtime = Date.new(1989, 4, 25).to_time
+      mtime = Time.gm(1989, 4, 24, 14)
       described_class.new output_io, name: 'name', mode: '100644'.to_i(8), mtime: mtime
     end
     it 'writes a compressible single-block file correctly' do

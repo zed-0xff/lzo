@@ -42,7 +42,7 @@ describe LZO do
     end
 
     it 'supports lzop too' do
-      Timecop.freeze Date.new(1989, 4, 25) do
+      Timecop.freeze Time.gm(1989, 4, 24, 14) do
         compressed = LZO.compress 'aaa' * 100, lzop: true
         expected = File.binread fixture_path 'nameless_compressor_output.txt.lzo'
         expect(compressed).to eq(expected)
