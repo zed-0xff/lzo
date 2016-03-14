@@ -1,7 +1,7 @@
 module LZO
   module FFI
     extend ::FFI::Library
-    ffi_lib 'lzo2'
+    ffi_lib ['lzo2', 'liblzo2.so.2']
 
     # TODO: all "uint64" refs should check platform bitness
     WORKMEM_SIZE_32 = 65_536
