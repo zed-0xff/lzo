@@ -42,6 +42,8 @@ describe LZO do
     end
 
     it 'supports lzop too' do
+      allow(LZO).to receive(:library_version).and_return 8336
+
       Timecop.freeze Time.gm(1989, 4, 24, 14) do
         compressed = LZO.compress 'aaa' * 100, lzop: true
         expected = File.binread fixture_path 'nameless_compressor_output.txt.lzo'

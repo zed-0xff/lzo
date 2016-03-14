@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe LZO::LzopCompressor do
   describe 'writing a file' do
+    before do
+      allow(LZO).to receive(:library_version).and_return 8336
+    end
+
     let(:output_io) { StringIO.new ''.force_encoding 'BINARY' }
     subject do
       mtime = Time.gm(1989, 4, 24, 14)
