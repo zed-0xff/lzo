@@ -7,4 +7,4 @@ before_install: gem install bundler -v 1.10.6
 addons:
   apt_packages:
     - liblzo2-dev
-bundler_args: --without development
+bundler_args: --without pry
