@@ -3,6 +3,8 @@ rvm:
   - 2.3.0
   - jruby-9.0.0.0
   - rbx-3.19
+  - rbx-2.71828182
+  - rbx-3.18
 before_install: gem install bundler -v 1.10.6
 addons:
   apt_packages:
