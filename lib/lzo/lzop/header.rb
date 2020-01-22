@@ -13,7 +13,7 @@ module LZO
         LzoMethod :lzo_method
         uint8 :level, onlyif: -> { version >= 0x940 }
         HeaderFlags :flags
-        uint32 :filter, onlyif: -> { flags.include? :F_H_FILTER }
+        uint32 :fhfilter, onlyif: -> { flags.include? :F_H_FILTER }
         uint32 :mode
         uint32 :mtime_low
         uint32 :mtime_high, onlyif: -> { version >= 0x0940 }
